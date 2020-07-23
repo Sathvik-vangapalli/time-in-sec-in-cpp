@@ -1,0 +1,38 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class time{
+	private:
+		int h;
+		int m;
+		int s;
+	public:
+		enterdetails()
+		{
+			int t;
+			cout<<"Enter time:\nHours? ";
+			cin>>h;
+			cout<<"Minutes? ";
+			cin>>m;
+			cout<<"Seconds? ";
+			cin>>s;
+			cout<<"The time is = ";
+   			cout<<setw(2)<<setfill('0')<<h<<":"<<setw(2)<<setfill('0')<<m<<":"<<setw(2)<<setfill('0')<<s<<endl;  
+			t=(h*3600)+ (m*60) +s;
+			cout<<"Time in total seconds: "<<t;
+		}
+};
+main()
+{
+	time t1;
+	t1.enterdetails();
+}
+
+
+OUTPUT:
+Enter time:
+Hours? 1
+Minutes? 1
+Seconds? 6
+The time is = 01:01:06
+Time in total seconds: 3666
